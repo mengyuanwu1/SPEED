@@ -1,8 +1,8 @@
 pipeline:
   class_path: src.pipeline.DynamicPipelineBENDR
-dataset_path: {DATASET_PATH}
-out_path: {OUTPUT_PATH}
-log_path: {LOG_PATH}
+dataset_path: /media/nvme0-leo/Dropbox/EEGDatasets/TUEG/v2.0.1/edf
+out_path: /media/nvme0-leo/PretrainExports
+log_path: /media/nvme0-leo/PretrainExports/Logs
 overwrite: False
 shuffle_files: True
 batch_size: 5

@@ -1,11 +1,11 @@
 pipeline:
-  class_path: src.pipeline.DynamicPipeline
+  class_path: SPEED.src.pipeline.DynamicPipeline
   init_args:
     do_ica: False
     line_freqs: [60]
-dataset_path: {DATASET_PATH}
-out_path: {OUTPUT_PATH}
-log_path: {LOG_PATH}
+dataset_path: /media/nvme0-leo/Dropbox/EEGDatasets/TUEG/v2.0.1/edf/
+out_path: /media/nvme0-leo/PretrainExports/
+log_path: /media/nvme0-leo/PretrainExports/Logs/preprocess.log
 overwrite: False
 shuffle_files: True
 batch_size: 3

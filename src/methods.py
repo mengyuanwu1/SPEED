@@ -9,7 +9,7 @@ from meegkit.detrend import detrend
 from meegkit.dss import dss_line_iter
 from torch.nn.functional import interpolate
 from torch import tensor
-from src.utils import create_channel_type_dict, heuristic_resolution
+from SPEED.src.utils import create_channel_type_dict, heuristic_resolution
 
 class PreprocessMethods:
     def to_standard_names(raw):
@@ -39,7 +39,7 @@ class PreprocessMethods:
         discrete_channels = np.array(raw.ch_names)[unique_counts < min_unique].tolist()
         
         # Bad channels
-        noisychannels = pyprep.NoisyChannels(raw)        
+        noisychannels = pyprep.NoisyChannels(raw, do_detrend=False)
         noisychannels.find_bad_by_SNR()
         noisychannels.find_bad_by_correlation()
         noisychannels.find_bad_by_deviation()
